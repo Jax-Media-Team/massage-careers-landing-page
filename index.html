@@ -1,0 +1,591 @@
+<!--
+  ============================================================
+  DIVI CODE MODULE — DEPLOYMENT GUIDE
+  ============================================================
+
+  1. FONTS — Paste into Divi > Theme Options > Integration > Head:
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  2. HERO LCP PRELOAD (optional, paste into Head after fonts):
+
+     <link rel="preload" as="image"
+       href="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1200&h=675&fit=crop&auto=format&q=75"
+       fetchpriority="high">
+
+  3. HTML — Paste everything below into a Divi Code Module
+     (Page > Add Section > Row > Code Module).
+
+  4. CSS — Paste styles.css into Divi > Theme Options > Custom CSS.
+
+  5. JS — Paste into Divi > Theme Options > Integration > Body (footer):
+
+     <script defer>
+       // paste script.js contents here
+     </script>
+
+     The script uses DOMContentLoaded and is safe with defer.
+
+  6. PRODUCTION IMAGES — For best performance, replace Unsplash
+     URLs with self-hosted WebP/AVIF. Update the hero background
+     URL in styles.css under .cl-hero.
+
+  ============================================================
+-->
+
+<!-- LOCAL PREVIEW: These tags load fonts/styles/scripts for browser preview.
+     For Divi deployment, omit these and follow the integration guide above. -->
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<section class="career-landing">
+
+  <!-- ============================================================
+       SECTION 1: HERO
+       ============================================================ -->
+  <section class="cl-hero" id="hero">
+    <div class="cl-hero__overlay"></div>
+    <div class="cl-hero__content">
+      <span class="cl-hero__eyebrow">A Career Built on Purpose</span>
+      <h1 class="cl-hero__headline">Your Hands Can <br>Change Lives — <br>Including Your Own</h1>
+      <p class="cl-hero__subtext">Massage therapy is more than a skill — it's a career built on purpose, flexibility, and real human connection. Discover how you can start a meaningful new chapter.</p>
+      <div class="cl-hero__actions">
+        <a href="#lead-form" class="cl-btn cl-btn--primary cl-btn--hero">Request Information</a>
+        <a href="#about" class="cl-btn cl-btn--ghost">Learn More</a>
+      </div>
+    </div>
+    <!-- PLACEHOLDER: Replace background-image in CSS with real hero photo -->
+  </section>
+
+  <!-- ============================================================
+       SECTION 2: CAREER SNAPSHOT / INDUSTRY STATS
+       ============================================================ -->
+  <section class="cl-stats" id="stats">
+    <div class="cl-container">
+      <div class="cl-stats__grid">
+        <div class="cl-stats__item">
+          <!-- PLACEHOLDER: Replace with real BLS / industry stat -->
+          <span class="cl-stats__number" data-target="20">0%</span>
+          <span class="cl-stats__label">Projected Job Growth</span>
+          <span class="cl-stats__sub">Through 2032 (BLS)</span>
+        </div>
+        <div class="cl-stats__divider"></div>
+        <div class="cl-stats__item">
+          <!-- PLACEHOLDER: Replace with real salary data -->
+          <span class="cl-stats__number">$50K+</span>
+          <span class="cl-stats__label">Average Annual Salary</span>
+          <span class="cl-stats__sub">Varies by location &amp; setting</span>
+        </div>
+        <div class="cl-stats__divider"></div>
+        <div class="cl-stats__item">
+          <span class="cl-stats__number">80%</span>
+          <span class="cl-stats__label">Flexible Schedules</span>
+          <span class="cl-stats__sub">Set your own hours</span>
+        </div>
+        <div class="cl-stats__divider"></div>
+        <div class="cl-stats__item">
+          <!-- PLACEHOLDER: Replace with real program length -->
+          <span class="cl-stats__number">6–12</span>
+          <span class="cl-stats__label">Months of Training</span>
+          <span class="cl-stats__sub">To begin your career</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3: CAREER INTRODUCTION
+       ============================================================ -->
+  <section class="cl-intro" id="about">
+    <div class="cl-container">
+      <div class="cl-intro__grid">
+        <div class="cl-intro__image">
+          <!-- PLACEHOLDER: Replace src with real lifestyle image -->
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=750&fit=crop&auto=format&q=75" alt="Massage therapist working with a client in a calm, professional setting" width="600" height="750" loading="lazy" decoding="async">
+        </div>
+        <div class="cl-intro__text">
+          <span class="cl-tag">Why Massage Therapy?</span>
+          <h2>A Career That Truly <br>Makes a Difference</h2>
+          <p class="cl-intro__lead">Massage therapy isn't just a job — it's a profession built around helping people feel better every single day.</p>
+          <p>Whether you're drawn to healthcare, wellness, sports, or spa environments, this career offers a unique blend of purpose and flexibility that few professions can match.</p>
+          <p>The wellness industry continues to grow as more people prioritize their physical and mental health. Massage therapists are in demand across clinics, resorts, corporate wellness programs, rehabilitation centers, and private practice.</p>
+          <p>If you're considering a career change — or exploring your options for the first time — massage therapy offers a clear, achievable path to meaningful work with a schedule you control.</p>
+          <ul class="cl-intro__list">
+            <li>Help people recover, relax, and heal</li>
+            <li>Work in diverse settings — spas, clinics, sports, private practice</li>
+            <li>Build a career with real independence</li>
+            <li>Enter a growing industry with strong demand</li>
+          </ul>
+          <a href="#lead-form" class="cl-btn cl-btn--secondary">Learn How to Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4: HORIZONTAL IMAGE GALLERY
+       ============================================================ -->
+  <section class="cl-gallery" id="gallery">
+    <div class="cl-container">
+      <span class="cl-tag">See the Possibilities</span>
+      <h2>Where Massage <br>Therapists Work</h2>
+      <p class="cl-gallery__subtitle">From tranquil spas to professional clinics, the environments are as varied as the people who choose this career.</p>
+    </div>
+    <div class="cl-gallery__track">
+      <!-- PLACEHOLDER: Replace all gallery images with real photos -->
+      <div class="cl-gallery__slide">
+        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=500&h=350&fit=crop&auto=format&q=75" alt="Spa treatment room with warm lighting" width="500" height="350" loading="lazy" decoding="async">
+        <div class="cl-gallery__overlay">
+          <span class="cl-gallery__caption">Spa &amp; Resort</span>
+        </div>
+      </div>
+      <div class="cl-gallery__slide">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=500&h=350&fit=crop&auto=format&q=75" alt="Therapist working with a client" width="500" height="350" loading="lazy" decoding="async">
+        <div class="cl-gallery__overlay">
+          <span class="cl-gallery__caption">Private Practice</span>
+        </div>
+      </div>
+      <div class="cl-gallery__slide">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=350&fit=crop&auto=format&q=75" alt="Modern wellness center interior" width="500" height="350" loading="lazy" decoding="async">
+        <div class="cl-gallery__overlay">
+          <span class="cl-gallery__caption">Wellness Center</span>
+        </div>
+      </div>
+      <div class="cl-gallery__slide">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=350&fit=crop&auto=format&q=75" alt="Classroom training environment" width="500" height="350" loading="lazy" decoding="async">
+        <div class="cl-gallery__overlay">
+          <span class="cl-gallery__caption">Training Program</span>
+        </div>
+      </div>
+      <div class="cl-gallery__slide">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&h=350&fit=crop&auto=format&q=75" alt="Clinical rehabilitation setting" width="500" height="350" loading="lazy" decoding="async">
+        <div class="cl-gallery__overlay">
+          <span class="cl-gallery__caption">Clinical Rehab</span>
+        </div>
+      </div>
+      <div class="cl-gallery__slide">
+        <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=500&h=350&fit=crop&auto=format&q=75" alt="Sports recovery and fitness massage" width="500" height="350" loading="lazy" decoding="async">
+        <div class="cl-gallery__overlay">
+          <span class="cl-gallery__caption">Sports &amp; Fitness</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5: LEAD CAPTURE FORM
+       ============================================================ -->
+  <section class="cl-form-section" id="lead-form">
+    <div class="cl-container">
+      <div class="cl-form-section__grid">
+        <div class="cl-form-section__text">
+          <span class="cl-tag">Take the First Step</span>
+          <h2>Request <br>Career Information</h2>
+          <p class="cl-form-section__lead">Curious about what a career in massage therapy looks like? Fill out this short form and we'll send you everything you need to know.</p>
+          <p><strong>No obligation. No pressure. Just the information you need to make an informed decision.</strong></p>
+          <ul class="cl-form-section__benefits">
+            <li>
+              <span class="cl-form-section__icon">&#10003;</span>
+              Career &amp; salary information
+            </li>
+            <li>
+              <span class="cl-form-section__icon">&#10003;</span>
+              Training program details
+            </li>
+            <li>
+              <span class="cl-form-section__icon">&#10003;</span>
+              Financial aid options
+            </li>
+            <li>
+              <span class="cl-form-section__icon">&#10003;</span>
+              Licensing requirements
+            </li>
+          </ul>
+        </div>
+        <div class="cl-form-section__form-wrap">
+          <!--
+            FORM INTEGRATION NOTE:
+            This form is a front-end prototype. To connect it to a CRM
+            or marketing platform (e.g., HubSpot, Salesforce, Mailchimp,
+            ActiveCampaign), replace the form action and method below,
+            or wire it up via JavaScript / API integration.
+          -->
+          <form class="cl-form" id="career-form" action="#" method="POST">
+            <h3 class="cl-form__title">Get Started Today</h3>
+            <p class="cl-form__intro">Takes less than 30 seconds.</p>
+            <div class="cl-form__row">
+              <div class="cl-form__field">
+                <label for="first-name">First Name <span class="cl-form__req">*</span></label>
+                <input type="text" id="first-name" name="first_name" required placeholder="Jane">
+              </div>
+              <div class="cl-form__field">
+                <label for="last-name">Last Name <span class="cl-form__req">*</span></label>
+                <input type="text" id="last-name" name="last_name" required placeholder="Smith">
+              </div>
+            </div>
+            <div class="cl-form__field">
+              <label for="email">Email Address <span class="cl-form__req">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="cl-form__row">
+              <div class="cl-form__field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+              </div>
+              <div class="cl-form__field">
+                <label for="zip">ZIP Code <span class="cl-form__req">*</span></label>
+                <input type="text" id="zip" name="zip_code" required placeholder="12345" maxlength="10">
+              </div>
+            </div>
+            <div class="cl-form__field">
+              <label for="interest">What interests you most?</label>
+              <select id="interest" name="interest">
+                <option value="" disabled selected>Select an option</option>
+                <option value="career-change">Making a Career Change</option>
+                <option value="first-career">Starting My First Career</option>
+                <option value="salary-growth">Earning Potential</option>
+                <option value="helping-others">Helping Others</option>
+                <option value="flexibility">Schedule Flexibility</option>
+                <option value="other">Other / Just Exploring</option>
+              </select>
+            </div>
+            <button type="submit" class="cl-btn cl-btn--primary cl-btn--full">Request Information</button>
+            <p class="cl-form__disclaimer">By submitting, you agree to receive career information via email or phone. We respect your privacy and will never sell your information.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6: VIDEO TESTIMONIALS
+       ============================================================ -->
+  <section class="cl-videos" id="videos">
+    <div class="cl-container">
+      <div class="cl-videos__header">
+        <span class="cl-tag">Real Stories</span>
+        <h2>Hear From People Who <br>Made the Change</h2>
+        <p class="cl-videos__subtitle">These are real massage therapists sharing their experiences — why they chose this career, what training was like, and what their lives look like now.</p>
+      </div>
+      <div class="cl-videos__grid">
+        <!-- PLACEHOLDER: Replace each video placeholder with real YouTube embed URLs -->
+        <div class="cl-videos__card">
+          <div class="cl-videos__embed">
+            <div class="cl-videos__placeholder">
+              <svg class="cl-videos__play-icon" viewBox="0 0 64 64" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="rgba(27,107,74,0.85)"/><polygon points="26,20 26,44 46,32" fill="#fff"/></svg>
+              <span class="cl-videos__placeholder-text">Video Coming Soon</span>
+            </div>
+          </div>
+          <div class="cl-videos__body">
+            <h4>From Corporate Desk to Healing Hands</h4>
+            <p>"I spent 10 years in an office. Now I help people feel better every day — and I've never been happier."</p>
+          </div>
+        </div>
+        <div class="cl-videos__card">
+          <div class="cl-videos__embed">
+            <div class="cl-videos__placeholder">
+              <svg class="cl-videos__play-icon" viewBox="0 0 64 64" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="rgba(27,107,74,0.85)"/><polygon points="26,20 26,44 46,32" fill="#fff"/></svg>
+              <span class="cl-videos__placeholder-text">Video Coming Soon</span>
+            </div>
+          </div>
+          <div class="cl-videos__body">
+            <h4>Building My Own Practice</h4>
+            <p>"Training gave me the skills and confidence to open my own studio. I set my own hours and love what I do."</p>
+          </div>
+        </div>
+        <div class="cl-videos__card">
+          <div class="cl-videos__embed">
+            <div class="cl-videos__placeholder">
+              <svg class="cl-videos__play-icon" viewBox="0 0 64 64" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="rgba(27,107,74,0.85)"/><polygon points="26,20 26,44 46,32" fill="#fff"/></svg>
+              <span class="cl-videos__placeholder-text">Video Coming Soon</span>
+            </div>
+          </div>
+          <div class="cl-videos__body">
+            <h4>A Second Career That Matters</h4>
+            <p>"I was nervous about starting over at 40. Best decision I ever made. The training was hands-on and supportive."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 7: FAQ FLIP CARDS
+       ============================================================ -->
+  <section class="cl-faq" id="faq">
+    <div class="cl-container">
+      <div class="cl-faq__header">
+        <span class="cl-tag">Common Questions</span>
+        <h2>Frequently Asked <br>Questions</h2>
+        <p class="cl-faq__subtitle">Click or tap any question to reveal the answer.</p>
+      </div>
+      <div class="cl-faq__grid">
+
+        <div class="cl-faq__card" tabindex="0" role="button" aria-expanded="false">
+          <div class="cl-faq__front">
+            <span class="cl-faq__icon">?</span>
+            <p>How long does it take to become a massage therapist?</p>
+          </div>
+          <div class="cl-faq__back">
+            <p>Most programs take between 6 and 12 months to complete, depending on the program structure and state requirements. Some accelerated programs can be completed even faster.</p>
+          </div>
+        </div>
+
+        <div class="cl-faq__card" tabindex="0" role="button" aria-expanded="false">
+          <div class="cl-faq__front">
+            <span class="cl-faq__icon">?</span>
+            <p>What environments can massage therapists work in?</p>
+          </div>
+          <div class="cl-faq__back">
+            <p>Massage therapists work in spas, wellness centers, hospitals, sports clinics, chiropractic offices, corporate wellness programs, and in private practice. The variety of settings is one of the most appealing aspects of this career.</p>
+          </div>
+        </div>
+
+        <div class="cl-faq__card" tabindex="0" role="button" aria-expanded="false">
+          <div class="cl-faq__front">
+            <span class="cl-faq__icon">?</span>
+            <p>Is massage therapy a flexible career?</p>
+          </div>
+          <div class="cl-faq__back">
+            <p>Absolutely. Many massage therapists set their own schedules, choose part-time or full-time work, and have the freedom to build a career around their personal life — not the other way around.</p>
+          </div>
+        </div>
+
+        <div class="cl-faq__card" tabindex="0" role="button" aria-expanded="false">
+          <div class="cl-faq__front">
+            <span class="cl-faq__icon">?</span>
+            <p>Do I need healthcare experience to start?</p>
+          </div>
+          <div class="cl-faq__back">
+            <p>No prior healthcare experience is required. Massage therapy programs are designed to teach you everything from anatomy and physiology to hands-on technique — from the ground up.</p>
+          </div>
+        </div>
+
+        <div class="cl-faq__card" tabindex="0" role="button" aria-expanded="false">
+          <div class="cl-faq__front">
+            <span class="cl-faq__icon">?</span>
+            <p>Is massage therapy a good career change option?</p>
+          </div>
+          <div class="cl-faq__back">
+            <p>Many massage therapists come from completely different fields — office work, retail, food service, and more. The training timeline is short, the career outlook is strong, and the work is deeply rewarding.</p>
+          </div>
+        </div>
+
+        <div class="cl-faq__card" tabindex="0" role="button" aria-expanded="false">
+          <div class="cl-faq__front">
+            <span class="cl-faq__icon">?</span>
+            <p>What kind of schedule do massage therapists have?</p>
+          </div>
+          <div class="cl-faq__back">
+            <p>Schedules vary widely. Some therapists work traditional business hours at clinics or spas. Others build evening and weekend availability for private clients. You have significant control over when and how much you work.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 8: TESTIMONIAL QUOTES
+       ============================================================ -->
+  <section class="cl-testimonials" id="testimonials">
+    <div class="cl-container">
+      <span class="cl-tag">Success Stories</span>
+      <h2>What Massage Therapists <br>Are Saying</h2>
+      <div class="cl-testimonials__slider" id="testimonial-slider">
+        <div class="cl-testimonials__track">
+          <!-- PLACEHOLDER: Replace with real testimonial quotes and names -->
+          <div class="cl-testimonials__card">
+            <div class="cl-testimonials__card-inner">
+              <div class="cl-testimonials__quote-mark">&ldquo;</div>
+              <blockquote>I was stuck in a career that didn't excite me. Massage therapy gave me purpose, flexibility, and a real connection with the people I help every day.</blockquote>
+              <div class="cl-testimonials__author">
+                <div class="cl-testimonials__avatar">JM</div>
+                <div>
+                  <strong>Jessica M.</strong>
+                  <span>Licensed Massage Therapist, 3 Years</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cl-testimonials__card">
+            <div class="cl-testimonials__card-inner">
+              <div class="cl-testimonials__quote-mark">&ldquo;</div>
+              <blockquote>The training was hands-on from day one. Within a year, I had my license and was building my client list. I'm earning more now than I did at my desk job.</blockquote>
+              <div class="cl-testimonials__author">
+                <div class="cl-testimonials__avatar">DR</div>
+                <div>
+                  <strong>David R.</strong>
+                  <span>Licensed Massage Therapist, 5 Years</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cl-testimonials__card">
+            <div class="cl-testimonials__card-inner">
+              <div class="cl-testimonials__quote-mark">&ldquo;</div>
+              <blockquote>I'm a mom with two kids. Massage therapy lets me work the hours I choose and still be there for my family. It's the best career decision I've ever made.</blockquote>
+              <div class="cl-testimonials__author">
+                <div class="cl-testimonials__avatar">SP</div>
+                <div>
+                  <strong>Sarah P.</strong>
+                  <span>Licensed Massage Therapist, 2 Years</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cl-testimonials__card">
+            <div class="cl-testimonials__card-inner">
+              <div class="cl-testimonials__quote-mark">&ldquo;</div>
+              <blockquote>After 15 years in retail management, I needed a change. Now I work in a sports clinic and help athletes get back on the field. I love every minute of it.</blockquote>
+              <div class="cl-testimonials__author">
+                <div class="cl-testimonials__avatar">MK</div>
+                <div>
+                  <strong>Marcus K.</strong>
+                  <span>Licensed Massage Therapist, 4 Years</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cl-testimonials__nav">
+          <button class="cl-testimonials__btn cl-testimonials__btn--prev" aria-label="Previous testimonial">&larr;</button>
+          <div class="cl-testimonials__dots" id="testimonial-dots"></div>
+          <button class="cl-testimonials__btn cl-testimonials__btn--next" aria-label="Next testimonial">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 9: CAREER PATH TIMELINE
+       ============================================================ -->
+  <section class="cl-timeline" id="timeline">
+    <div class="cl-container">
+      <div class="cl-timeline__header">
+        <span class="cl-tag">Your Journey</span>
+        <h2>The Path to Becoming <br>a Massage Therapist</h2>
+        <p class="cl-timeline__subtitle">A straightforward roadmap from exploration to your first day on the job.</p>
+      </div>
+      <div class="cl-timeline__line">
+
+        <div class="cl-timeline__step" data-step="1">
+          <div class="cl-timeline__marker">1</div>
+          <div class="cl-timeline__content">
+            <h3>Explore the Career</h3>
+            <p>Research the profession, understand the opportunities, and decide if massage therapy aligns with your goals and interests.</p>
+          </div>
+        </div>
+
+        <div class="cl-timeline__step" data-step="2">
+          <div class="cl-timeline__marker">2</div>
+          <div class="cl-timeline__content">
+            <h3>Request Information</h3>
+            <p>Reach out to training programs, ask questions, and gather the details you need to make an informed decision.</p>
+          </div>
+        </div>
+
+        <div class="cl-timeline__step" data-step="3">
+          <div class="cl-timeline__marker">3</div>
+          <div class="cl-timeline__content">
+            <h3>Choose a Training Program</h3>
+            <p>Select a program that fits your schedule, budget, and career goals. Look for accredited programs with strong job placement support.</p>
+          </div>
+        </div>
+
+        <div class="cl-timeline__step" data-step="4">
+          <div class="cl-timeline__marker">4</div>
+          <div class="cl-timeline__content">
+            <h3>Complete Your Training</h3>
+            <p>Gain hands-on skills in anatomy, physiology, and massage technique. Most programs can be completed in 6 to 12 months.</p>
+          </div>
+        </div>
+
+        <div class="cl-timeline__step" data-step="5">
+          <div class="cl-timeline__marker">5</div>
+          <div class="cl-timeline__content">
+            <h3>Prepare for Licensure</h3>
+            <p>Study for and pass your licensing exam. Requirements vary by state, and your program will help guide you through the process.</p>
+          </div>
+        </div>
+
+        <div class="cl-timeline__step" data-step="6">
+          <div class="cl-timeline__marker">6</div>
+          <div class="cl-timeline__content">
+            <h3>Begin Your New Career</h3>
+            <p>Start practicing as a licensed massage therapist. Whether you join a clinic, spa, or start your own practice — your new career begins now.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 10: FINAL CALL TO ACTION
+       ============================================================ -->
+  <section class="cl-final-cta" id="final-cta">
+    <div class="cl-container">
+      <div class="cl-final-cta__inner">
+        <span class="cl-final-cta__eyebrow">Your Future Starts Here</span>
+        <h2>Ready to Start Something Meaningful?</h2>
+        <p>You don't need years of experience or a healthcare background. You just need the desire to help people and the willingness to learn. Take the first step today.</p>
+        <a href="#lead-form" class="cl-btn cl-btn--primary cl-btn--lg">Request Information Now</a>
+        <p class="cl-final-cta__micro">No obligation. Takes 30 seconds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 11: FOOTER
+       ============================================================ -->
+  <footer class="cl-footer">
+    <div class="cl-container">
+      <div class="cl-footer__grid">
+        <div class="cl-footer__col cl-footer__col--brand">
+          <h4>Massage Therapy Careers</h4>
+          <p>Helping people discover rewarding careers in the growing wellness industry.</p>
+        </div>
+        <div class="cl-footer__col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">Why Massage Therapy</a></li>
+            <li><a href="#timeline">Career Path</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#lead-form">Request Information</a></li>
+          </ul>
+        </div>
+        <div class="cl-footer__col">
+          <h4>Resources</h4>
+          <ul>
+            <!-- PLACEHOLDER: Replace with real resource links -->
+            <li><a href="#">Career Outlook</a></li>
+            <li><a href="#">Salary Information</a></li>
+            <li><a href="#">Licensing Guide</a></li>
+            <li><a href="#">Financial Aid</a></li>
+          </ul>
+        </div>
+        <div class="cl-footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <!-- PLACEHOLDER: Replace with real legal page links -->
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cl-footer__bottom">
+        <p>&copy; 2026 Massage Therapy Careers. All rights reserved.</p>
+        <!-- PLACEHOLDER: Update copyright and legal entity as needed -->
+      </div>
+    </div>
+  </footer>
+
+</section><!-- /.career-landing -->
+
+<script src="script.js"></script>
