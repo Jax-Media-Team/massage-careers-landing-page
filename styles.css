@@ -32,7 +32,7 @@
   --cl-transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --cl-font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --cl-font-heading: 'DM Serif Display', Georgia, serif;
-  --cl-section-gap: clamp(80px, 10vw, 120px);
+  --cl-section-gap: clamp(56px, 7vw, 80px);
 }
 
 /* ----- Reset & Base ----- */
@@ -283,7 +283,7 @@
    ============================================================ */
 .career-landing .cl-stats {
   background: var(--cl-white);
-  padding: 80px 0;
+  padding: var(--cl-section-gap) 0;
   position: relative;
 }
 
@@ -435,7 +435,7 @@
    SECTION 4B: VIABLE CAREER
    ============================================================ */
 .career-landing .cl-viable {
-  padding: var(--cl-section-gap) 0;
+  padding: var(--cl-section-gap) 0 calc(var(--cl-section-gap) * 0.5);
   background: var(--cl-beige);
 }
 
@@ -468,11 +468,6 @@
 .career-landing .cl-viable__source {
   font-size: 0.88rem;
   line-height: 1.6;
-}
-
-.career-landing .cl-viable__source a,
-.career-landing .cl-viable__text p a {
-  word-break: break-all;
 }
 
 .career-landing .cl-viable__subheading {
@@ -1209,7 +1204,7 @@
   .career-landing {
     font-size: 17px;
     line-height: 1.75;
-    --cl-section-gap: 64px;
+    --cl-section-gap: 48px;
   }
 
   .career-landing h2 {
@@ -1276,10 +1271,6 @@
   }
 
   /* --- Stats --- */
-  .career-landing .cl-stats {
-    padding: 48px 0;
-  }
-
   .career-landing .cl-stats__grid {
     flex-direction: column;
     gap: 4px;
