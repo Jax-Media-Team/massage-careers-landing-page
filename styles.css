@@ -87,8 +87,9 @@
 }
 
 /* ----- Scroll offset for Divi sticky header ----- */
-.career-landing section[id] {
-  scroll-margin-top: 90px;
+.career-landing section[id],
+.career-landing #career-form {
+  scroll-margin-top: 24px;
 }
 
 /* ----- Container ----- */
