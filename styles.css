@@ -1352,11 +1352,15 @@
     box-shadow: none;
     border: none;
     background: transparent;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
   }
 
   .career-landing .cl-jotform-wrap iframe {
     min-height: 400px;
     border-radius: 0;
+    width: 100%;
   }
 
   /* --- Videos --- */
