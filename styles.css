@@ -1273,6 +1273,7 @@
   /* --- Stats --- */
   .career-landing .cl-stats__grid {
     flex-direction: column;
+    align-items: center;
     gap: 4px;
   }
 
@@ -1283,6 +1284,8 @@
 
   .career-landing .cl-stats__item {
     padding: 18px 16px;
+    text-align: center;
+    width: 100%;
   }
 
   .career-landing .cl-stats__number {
@@ -1344,12 +1347,16 @@
   }
 
   .career-landing .cl-jotform-wrap {
-    padding: 4px;
-    box-shadow: var(--cl-shadow-md);
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background: transparent;
   }
 
   .career-landing .cl-jotform-wrap iframe {
     min-height: 400px;
+    border-radius: 0;
   }
 
   /* --- Videos --- */
@@ -1370,36 +1377,71 @@
     font-size: 0.95rem;
   }
 
-  /* --- FAQ --- */
+  /* --- FAQ: switch from flip cards to accordion on mobile --- */
   .career-landing .cl-faq__grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
   }
 
   .career-landing .cl-faq__card {
-    min-height: 220px;
+    perspective: none;
+    min-height: auto;
   }
 
   .career-landing .cl-faq__card .cl-faq__front,
   .career-landing .cl-faq__card .cl-faq__back {
-    padding: 28px 24px;
+    position: relative;
+    inset: auto;
+    transform: none;
+    backface-visibility: visible;
+    padding: 24px 20px;
+  }
+
+  .career-landing .cl-faq__front {
+    border-radius: var(--cl-radius) var(--cl-radius) 0 0;
+  }
+
+  .career-landing .cl-faq__card .cl-faq__front {
+    flex-direction: row;
+    gap: 14px;
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .career-landing .cl-faq__front p {
     font-size: 1rem;
     line-height: 1.5;
-  }
-
-  .career-landing .cl-faq__back p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    margin: 0;
   }
 
   .career-landing .cl-faq__icon {
-    width: 42px;
-    height: 42px;
-    font-size: 1.15rem;
-    margin-bottom: 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .career-landing .cl-faq__card .cl-faq__back {
+    border-radius: 0 0 var(--cl-radius) var(--cl-radius);
+    display: none;
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .career-landing .cl-faq__card.is-flipped .cl-faq__front {
+    transform: none;
+    border-radius: var(--cl-radius) var(--cl-radius) 0 0;
+  }
+
+  .career-landing .cl-faq__card.is-flipped .cl-faq__back {
+    transform: none;
+    display: flex;
+  }
+
+  .career-landing .cl-faq__back p {
+    font-size: 0.95rem;
+    line-height: 1.65;
   }
 
   /* --- Headings: break removal --- */
