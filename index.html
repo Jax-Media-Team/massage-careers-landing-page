@@ -1,47 +1,23 @@
-<!--
-  ============================================================
-  DIVI CODE MODULE — DEPLOYMENT GUIDE
-  ============================================================
-
-  1. FONTS — Paste into Divi > Theme Options > Integration > Head:
-
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
-
-  2. HERO LCP PRELOAD (optional, paste into Head after fonts):
-
-     <link rel="preload" as="image"
-       href="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1200&h=675&fit=crop&auto=format&q=75"
-       fetchpriority="high">
-
-  3. HTML — Paste everything below into a Divi Code Module
-     (Page > Add Section > Row > Code Module).
-
-  4. CSS — Paste styles.css into Divi > Theme Options > Custom CSS.
-
-  5. JS — Paste into Divi > Theme Options > Integration > Body (footer):
-
-     <script defer>
-       // paste script.js contents here
-     </script>
-
-     The script uses DOMContentLoaded and is safe with defer.
-
-  6. PRODUCTION IMAGES — For best performance, replace Unsplash
-     URLs with self-hosted WebP/AVIF. Update the hero background
-     URL in styles.css under .cl-hero.
-
-  ============================================================
--->
-
-<!-- LOCAL PREVIEW: These tags load fonts/styles/scripts for browser preview.
-     For Divi deployment, omit these and follow the integration guide above. -->
-<meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Massage Therapy Careers — Start a Meaningful Career</title>
+  <meta name="description" content="Discover a rewarding career in massage therapy. Learn about training programs, earning potential, job growth, and how to get started.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!--
+    DIVI DEPLOYMENT NOTE:
+    When embedding in Divi, extract the .career-landing section block
+    into a Code Module, move CSS to Theme Options > Custom CSS, and
+    move JS to Theme Options > Integration > Body. The Divi theme
+    already provides DOCTYPE, viewport, and font loading.
+  -->
+</head>
+<body>
 
 <section class="career-landing">
 
@@ -568,3 +544,5 @@
 </section><!-- /.career-landing -->
 
 <script src="script.js"></script>
+</body>
+</html>

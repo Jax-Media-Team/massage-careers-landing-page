@@ -1202,34 +1202,82 @@
   }
 }
 
-/* Mobile */
+/* Mobile — optimized for 375px / 390px screens */
 @media (max-width: 640px) {
+
+  /* --- Base text sizing & spacing --- */
+  .career-landing {
+    font-size: 17px;
+    line-height: 1.75;
+    --cl-section-gap: 64px;
+  }
+
+  .career-landing h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .career-landing .cl-container {
+    padding: 0 20px;
+  }
+
+  .career-landing .cl-tag {
+    font-size: 0.7rem;
+    padding: 6px 14px;
+    margin-bottom: 16px;
+  }
+
+  /* --- Hero --- */
   .career-landing .cl-hero {
-    min-height: 85vh;
+    min-height: 90vh;
     padding: 100px 20px 60px;
   }
 
+  .career-landing .cl-hero__eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 20px;
+  }
+
   .career-landing .cl-hero__headline {
-    font-size: clamp(2rem, 8vw, 2.8rem);
+    font-size: 2.1rem;
+    line-height: 1.12;
+    margin-bottom: 20px;
   }
 
   .career-landing .cl-hero__headline br {
     display: none;
   }
 
+  .career-landing .cl-hero__subtext {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
   .career-landing .cl-hero__actions {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 12px;
   }
 
   .career-landing .cl-btn--hero {
     width: 100%;
-    max-width: 320px;
+    max-width: none;
+    font-size: 1.05rem;
+    padding: 18px 24px;
   }
 
   .career-landing .cl-btn--ghost {
     width: 100%;
-    max-width: 320px;
+    max-width: none;
+    padding: 16px 24px;
+  }
+
+  /* --- Stats --- */
+  .career-landing .cl-stats {
+    padding: 48px 0;
   }
 
   .career-landing .cl-stats__grid {
@@ -1243,9 +1291,127 @@
   }
 
   .career-landing .cl-stats__item {
-    padding: 16px;
+    padding: 18px 16px;
   }
 
+  .career-landing .cl-stats__number {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+  }
+
+  .career-landing .cl-stats__label {
+    font-size: 0.95rem;
+  }
+
+  .career-landing .cl-stats__sub {
+    font-size: 0.82rem;
+  }
+
+  /* --- Intro --- */
+  .career-landing .cl-intro__lead {
+    font-size: 1.1rem;
+  }
+
+  .career-landing .cl-intro__text p {
+    font-size: 1rem;
+  }
+
+  .career-landing .cl-intro__list li {
+    font-size: 1rem;
+    padding-left: 34px;
+    margin-bottom: 16px;
+  }
+
+  .career-landing .cl-btn--secondary {
+    width: 100%;
+    text-align: center;
+    padding: 16px 24px;
+  }
+
+  /* --- Viable career --- */
+  .career-landing .cl-viable__lead {
+    font-size: 1.1rem;
+  }
+
+  .career-landing .cl-viable__text p {
+    font-size: 1rem;
+  }
+
+  .career-landing .cl-viable__source {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .career-landing .cl-viable__subheading {
+    font-size: 1.05rem;
+    margin: 28px 0 14px;
+  }
+
+  .career-landing .cl-viable__workplaces li {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .career-landing .cl-jotform-wrap {
+    padding: 4px;
+    box-shadow: var(--cl-shadow-md);
+  }
+
+  .career-landing .cl-jotform-wrap iframe {
+    min-height: 400px;
+  }
+
+  /* --- Videos --- */
+  .career-landing .cl-videos__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .career-landing .cl-videos__subtitle {
+    font-size: 1rem;
+  }
+
+  .career-landing .cl-videos__card h4 {
+    font-size: 1.05rem;
+  }
+
+  .career-landing .cl-videos__card p {
+    font-size: 0.95rem;
+  }
+
+  /* --- FAQ --- */
+  .career-landing .cl-faq__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .career-landing .cl-faq__card {
+    min-height: 220px;
+  }
+
+  .career-landing .cl-faq__card .cl-faq__front,
+  .career-landing .cl-faq__card .cl-faq__back {
+    padding: 28px 24px;
+  }
+
+  .career-landing .cl-faq__front p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .career-landing .cl-faq__back p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .career-landing .cl-faq__icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.15rem;
+    margin-bottom: 16px;
+  }
+
+  /* --- Headings: break removal --- */
   .career-landing .cl-intro__text h2 br,
   .career-landing .cl-viable__text h2 br,
   .career-landing .cl-videos__header h2 br,
@@ -1255,42 +1421,58 @@
     display: none;
   }
 
-  .career-landing .cl-jotform-wrap iframe {
-    min-height: 400px;
-  }
-
-  .career-landing .cl-videos__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .career-landing .cl-faq__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .career-landing .cl-faq__card {
-    min-height: 260px;
-  }
-
-  .career-landing .cl-faq__back p {
-    font-size: 0.78rem;
-    line-height: 1.55;
+  /* --- Testimonials --- */
+  .career-landing .cl-testimonials__card {
+    padding: 0 6px;
   }
 
   .career-landing .cl-testimonials__card-inner {
     padding: 32px 24px 28px;
   }
 
+  .career-landing .cl-testimonials__quote-mark {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+
   .career-landing .cl-testimonials__card blockquote {
-    font-size: 0.88rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
   }
 
-  .career-landing .cl-footer__grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .career-landing .cl-testimonials__author strong {
+    font-size: 0.95rem;
   }
 
+  .career-landing .cl-testimonials__author span {
+    font-size: 0.82rem;
+  }
+
+  .career-landing .cl-testimonials__btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+
+  .career-landing .cl-testimonials__dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .career-landing .cl-testimonials__nav {
+    margin-top: 32px;
+    gap: 12px;
+  }
+
+  /* --- Timeline --- */
   .career-landing .cl-timeline__header {
     text-align: left;
+    margin-bottom: 48px;
+  }
+
+  .career-landing .cl-timeline__subtitle {
+    font-size: 1rem;
   }
 
   .career-landing .cl-timeline__line {
@@ -1310,10 +1492,62 @@
 
   .career-landing .cl-timeline__step {
     padding-left: 24px;
+    padding-bottom: 40px;
   }
 
-  .career-landing .cl-testimonials__card {
-    padding: 0 8px;
+  .career-landing .cl-timeline__content h3 {
+    font-size: 1.1rem;
+  }
+
+  .career-landing .cl-timeline__content p {
+    font-size: 0.95rem;
+  }
+
+  /* --- Final CTA --- */
+  .career-landing .cl-final-cta p {
+    font-size: 1.05rem;
+  }
+
+  .career-landing .cl-btn--lg {
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 18px 32px;
+  }
+
+  .career-landing .cl-final-cta__micro {
+    font-size: 0.85rem;
+  }
+
+  /* --- Footer --- */
+  .career-landing .cl-footer {
+    padding-top: 48px;
+  }
+
+  .career-landing .cl-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .career-landing .cl-footer p {
+    font-size: 0.92rem;
+  }
+
+  .career-landing .cl-footer h4 {
+    font-size: 0.95rem;
+  }
+
+  .career-landing .cl-footer ul a {
+    font-size: 0.92rem;
+    padding: 4px 0;
+    display: inline-block;
+  }
+
+  .career-landing .cl-footer ul li {
+    margin-bottom: 14px;
+  }
+
+  .career-landing .cl-footer__bottom p {
+    font-size: 0.82rem;
   }
 }
 
