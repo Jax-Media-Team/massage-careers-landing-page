@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!prefersReducedMotion) {
     var revealElements = document.querySelectorAll(
       ".cl-intro__image, .cl-intro__text, " +
-      ".cl-gallery .cl-container, " +
-      ".cl-form-section__text, .cl-form-section__form-wrap, " +
+      ".cl-viable__text, .cl-viable__form-wrap, " +
       ".cl-videos__header, .cl-videos__card, " +
       ".cl-faq__header, .cl-faq__card, " +
       ".cl-testimonials .cl-container > .cl-tag, " +
@@ -61,57 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollObserver.observe(step);
       });
     }
-  }
-
-  /* ---------------------------------------------------------
-     HORIZONTAL GALLERY — MOUSE DRAG + WHEEL SCROLL
-     --------------------------------------------------------- */
-  var gallery = document.querySelector(".cl-gallery__track");
-  if (gallery) {
-    gallery.addEventListener("wheel", function (e) {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        gallery.scrollLeft += e.deltaY;
-      }
-    }, { passive: false });
-
-    var isDragging = false;
-    var startX = 0;
-    var scrollStart = 0;
-    var hasDragged = false;
-
-    gallery.addEventListener("mousedown", function (e) {
-      isDragging = true;
-      hasDragged = false;
-      startX = e.pageX - gallery.offsetLeft;
-      scrollStart = gallery.scrollLeft;
-      gallery.style.cursor = "grabbing";
-    });
-
-    gallery.addEventListener("mouseleave", function () {
-      isDragging = false;
-      gallery.style.cursor = "grab";
-    });
-
-    gallery.addEventListener("mouseup", function () {
-      isDragging = false;
-      gallery.style.cursor = "grab";
-    });
-
-    gallery.addEventListener("mousemove", function (e) {
-      if (!isDragging) return;
-      e.preventDefault();
-      hasDragged = true;
-      var x = e.pageX - gallery.offsetLeft;
-      gallery.scrollLeft = scrollStart - (x - startX) * 1.8;
-    });
-
-    gallery.addEventListener("click", function (e) {
-      if (hasDragged) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    }, true);
   }
 
   /* ---------------------------------------------------------
@@ -281,48 +229,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
     requestAnimationFrame(step);
-  }
-
-  /* ---------------------------------------------------------
-     FORM SUBMISSION HANDLER (placeholder)
-     --------------------------------------------------------- */
-  var form = document.getElementById("career-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      var formData = new FormData(form);
-      var data = {};
-      formData.forEach(function (value, key) {
-        data[key] = value;
-      });
-
-      /*
-        CRM / MARKETING PLATFORM INTEGRATION:
-        Replace this section with your actual form submission logic.
-        Options include:
-        - HubSpot Forms API
-        - Salesforce Web-to-Lead
-        - Mailchimp / ActiveCampaign API
-        - Custom backend endpoint
-        - WordPress admin-ajax.php or REST API
-      */
-
-      var btn = form.querySelector('button[type="submit"]');
-      var originalText = btn.textContent;
-      btn.textContent = "Thank You!";
-      btn.disabled = true;
-      btn.style.background = "#1a8a7d";
-      btn.style.borderColor = "#1a8a7d";
-
-      setTimeout(function () {
-        btn.textContent = originalText;
-        btn.disabled = false;
-        btn.style.background = "";
-        btn.style.borderColor = "";
-        form.reset();
-      }, 3000);
-    });
   }
 
 });
